@@ -1,5 +1,5 @@
 /* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Work+Sans&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Work+Sans&display=swap');*/
 
 /* Varible */
 :root {
@@ -1093,7 +1093,7 @@ footer {
 }
 /*End*/
 /*Responsive query*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
     #header-two {
         padding: 2em 0 2em 0;
     }
