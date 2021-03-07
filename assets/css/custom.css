@@ -1,7 +1,7 @@
 /* Import Font */
 /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Work+Sans');*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
 
 /* Varible */
@@ -1096,6 +1096,9 @@ footer {
 }
 /*End*/
 /*Responsive query*/
+/*380px - 400px
+767px
+991px*/
 @media only screen and (max-width: 400px) {
     #header-two {
         padding: 2em 0 2em 0;
