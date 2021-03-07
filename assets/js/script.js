@@ -79,4 +79,16 @@ $(function () {
 	// $('.owl-carousel').on('changed.owl-carousel', function (event) {
 	// 	$(this).find('owl-nav').removeClass('disabled');
 	// });
+
+	const menuButton = document.querySelector('.navbar-toggler');
+	let menuOpen = false;
+	menuButton.addEventListener('click', () => {
+		if (!menuOpen) {
+			menuButton.classList.add('open');
+			menuOpen = true;
+		} else {
+			menuButton.classList.remove('open');
+			menuOpen = false;
+		}
+	});
 });
