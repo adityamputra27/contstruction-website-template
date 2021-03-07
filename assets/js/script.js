@@ -18,9 +18,10 @@ $(function () {
 	    		items : 2,
 	    		dots: true
 	    	},
-	    	768 : {
+	    	767 : {
 	    		items : 2,
-	    		dots: true
+	    		dots: true,
+	    		margin: 20
 	    	},
 	    	1000 : {
 	    		items: 4,
@@ -43,8 +44,12 @@ $(function () {
 	    		items : 1,
 	    		dots: true
 	    	},
-	    	600 : {
-	    		items : 2,
+	    	767 : {
+	    		items : 1,
+	    		dots: true
+	    	},
+	    	768 : {
+	    		items: 2,
 	    		dots: true
 	    	}
 	    },
@@ -91,4 +96,7 @@ $(function () {
 			menuOpen = false;
 		}
 	});
+
+	// Init Aos
+	AOS.init();
 });

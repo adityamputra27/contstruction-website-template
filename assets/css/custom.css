@@ -283,8 +283,11 @@ nav {
     width: 80px;
 }
 #services .card-info {
-    font-family: 'Poppins', sans-serif;
     padding: 0 0 5px 0;
+}
+#services .card-info h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 #services .card-description p {
     line-height: 22px;
@@ -514,7 +517,7 @@ nav {
 #packages .card-packages-recommended {
     position: absolute;
     top: 0%;
-    right: 15px;
+    right: 0px;
     width: 120px;
     height: 35px;
     background-color: var(--orange);
@@ -919,6 +922,7 @@ footer {
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
+    padding: 0 8em 0 8em;
 }
 #carouselConstruction .carousel-inner .carousel-item p {
     font-size: 18px;
@@ -928,6 +932,7 @@ footer {
     z-index: 1;
     /* letter-spacing: 1px; */
     transform: translateY(-30%);
+    padding: 0 10em 0 10em;
 }
 #carouselConstruction .carousel-item img {
     background-attachment: fixed;
@@ -946,6 +951,10 @@ footer {
 }
 #carouselConstruction .carousel-inner .carousel-item a.btn-view-projects:hover {
     background-color: var(--dark-orange);
+}
+#carouselConstruction .info {
+    /*margin-left: 5em;
+    margin-top: 5em;*/
 }
 #carouselConstruction .carousel-control-prev {
     width: 40px;
@@ -1096,9 +1105,10 @@ footer {
 }
 /*End*/
 /*Responsive query*/
-/*380px - 400px
-767px
-991px*/
+/*380px - 400px - Mobile
+767px - Tablet
+991px - Dekstop*/
+/*Mobile*/
 @media only screen and (max-width: 400px) {
     #header-two {
         padding: 2em 0 2em 0;
@@ -1128,39 +1138,42 @@ footer {
     }
     #carouselConstruction .carousel-item img{
         /*margin: 30px 0 30px 0 !important;*/
-        height: 350px;
+        height: 450px;
         object-fit: cover;
     }
     #carouselConstruction .carousel-inner .carousel-item h1 {
-        font-size: 20px;
+        font-size: 22px;
+        padding: 0;
     } 
     #carouselConstruction .carousel-inner .carousel-item p {
-        font-size: 12px;
-        font-weight: normal;
+        font-size: 14px;
+        font-weight: 600;
         text-align: center;
         letter-spacing: 1;
-        margin: 0 1.5em 0 1.5em;
+        margin: 2em 1.5em 0 1.5em;
+        padding: 0;
         line-height: 20px;
     }
     #carouselConstruction .carousel-inner .carousel-item a.btn-view-projects {
         padding: 0px 15px 0px 15px;
         font-size: 12px;
         line-height: 35px;
-        margin-top: 1em
+        font-weight: 600;
+        margin-top: 2em
     }
     #carouselConstruction .carousel-control-prev {
         width: 30px;
         height: 60px;
         background: rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 40%;
+        top: 45%;
     }
     #carouselConstruction .carousel-control-next {
         width: 30px;
         height: 60px;
         background: rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 40%;
+        top: 45%;
     }
     #carouselConstruction .carousel-indicators li {
         width: 10px;
@@ -1170,10 +1183,10 @@ footer {
         padding-top: 40px;
     }
     #profile h2 {
-        font-size: 30px;
+        font-size: 24px;
     }
     #profile p {
-        font-size: 16px;
+        font-size: 14px;
     }
     #profile .profile-image {
         margin-top: 2em;
@@ -1182,20 +1195,31 @@ footer {
         width: 500px;
         text-align: center;
     }
+    #profile .profile-info-more li {
+        font-size: 14px;
+    }
+    #profile .profile-info-more .fa-check{
+        padding: 8px;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+    #services {
+        padding: 60px 0 40px 0;
+    }
     #services h2 {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 1em;
     }
     #services p {
-        font-size: 16px;
+        font-size: 14px;
     }
     #services .card-service {
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 3em;
+        margin-bottom: 4em;
         margin-top: 0;
-        width: 350px !important;
-        height: 440px !important;
+        width: 300px !important;
+        min-height: 390px !important;
     }
     #services .card-service-body {
         margin-left: auto;
@@ -1203,45 +1227,43 @@ footer {
         width: 250px;
     }
     #services .card-icon img{
-        padding: 40px 0 30px 0;
-        width: 100px;
+        padding: 40px 0 20px 0;
+        width: 80px;
     }
     #services .card-info {
         padding: 0 0 10px 0;
     }
     #services .card-info h5 {        
-        font-size: 25px;
-        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
     }
     #services .card-description p {
-        line-height: 22px;
         padding-bottom: 10px;
         font-size: 1em;
     }
     #services a.btn-read-more {
-        background-color: var(--orange);
-        font-family: 'Work Sans', sans-serif;
         font-size: 12px;
         font-weight: 600;
-        text-transform: uppercase;
-        color: var(--white);
-        padding: 12px 45px 12px 45px;
+        padding: 10px 40px 10px 40px;
+    }
+    #works {
+        padding: 60px 0 60px 0;
     }
     #works .works-info {
-        margin: 0 1.5em 0 1.5em;
+        margin: 0 1em 0 1em;
     }
     #works .works-info h2 {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 1em;
     }
     #works .works-info p {
-        font-size: 16px;
+        font-size: 14px;
     }
     #works .works-detail {
         margin: 5em 3em 0 3em;
     }
     #works .works-step {
-        left: 60%;
+        left: 63%;
     }
     #works .works-detail-number {
         width: 35px;
@@ -1254,7 +1276,7 @@ footer {
         margin: 1.5em 0 1em 0;
     } 
     #works .works-detail-title h4 {
-        font-size: 20px;
+        font-size: 18px;
     }
     #works .works-detail-description {
         margin: 0 0 5em 0;
@@ -1266,12 +1288,12 @@ footer {
     }
     #works .projects-category {
         top: 65%;
-        left: 20%;
+        left: 10%;
     }
     #works .projects-title {
         position: absolute;
         top: 75%;
-        left: 20%;
+        left: 10%;
         width: 300px;
     }
     #works .projects-title h4 {
@@ -1287,38 +1309,69 @@ footer {
     .works-projects .owl-dots {
         margin-top: 2.5em;
     }
+    #testimonials {
+        padding: 60px 0 60px 0;
+    }
     #testimonials .owl-next,
     #testimonials .owl-prev {
         display: none;
     }
     #testimonials .testimonials-title h2 {
-        font-size: 30px;
+        font-size: 24px;
+        line-height: 35px;
     }
     #testimonials .testimonials-box {
-        width: 430px;
-        min-height: 80px;
+        width: 330px;
+        min-height: 50px;
         margin: 0 auto 1em auto;
         padding: 30px;
         position: relative;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     }
     #testimonials .fa-quote-left {
-        position: absolute;
-        top: 65%;
+        /*top: 65%;*/
+        bottom: 5%;
         right: 5%;
-        font-size: 4em;
-        color: var(--orange);
-        transform: rotate(180deg);
-        opacity: .5;
+        font-size: 3em;
+    }
+    #testimonials .testimonials-avatar img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+    #testimonials .testimonials-info {
+        padding: 0 1em 0 5em;
+    }
+    #testimonials .testimonials-description p {
+        font-size: 14px;
+    }
+    #testimonials .testimonials-name h5{
+        margin-bottom: 0.5em;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    #testimonials .testimonials-position p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #testimonials .testimonials-rating img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
     }
     #packages {
         padding-bottom: 40px;
     }
+    #packages .packages-title h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
     #packages .card-packages {
-        margin-bottom: 3em;
+        margin-bottom: 4em;
     }
     #packages .card-packages-recommended {
-        right: 60px;
+        right: 20px;
     }
     #contact {
         padding: 60px 0 40px 0;
@@ -1327,38 +1380,49 @@ footer {
         margin-top: 3em;
     }
     #contact .get-in-touch h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
     #contact .contact-information h4 {
         font-size: 22px;
     }
     #contact .contact-information li {
-        font-size: 15px;
+        font-size: 14px;
     }
     #contact .contact-information li > * {
         display: inline-block;
         vertical-align: middle;
     }
     #contact .contact-information li > i.fa {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     #contact .opening-hours h4 {
         font-size: 22px;
     } 
     #contact .opening-hours li {
-        font-size: 15px;
+        font-size: 14px;
     }
     #contact .get-in-touch p {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
-        color: var(--text-gray);
     }
     #contact .get-in-touch form .send-message {
         display: flex;
         flex-wrap: wrap;
         margin: 3em 0 1.5em 0;
         justify-content: space-between;
+    }
+    #contact .send-message-button button {
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    #contact .send-message-button .fa-send {
+        padding-right: 0.5em;
+        font-size: 1.5em;
+    }
+    #contact form .send-message .input-box {
+        width: 100%;
     }
     #footer {
         padding: 60px 0 20px 0;
@@ -1368,6 +1432,13 @@ footer {
     }
     #footer .footer-information {
         margin-top: 1em;
+    }
+    #footer .footer-copyright h3 {
+        font-size: 14px;
+    }
+    #owl-clients .owl-prev,
+    #owl-clients .owl-next {
+        top: 30% !important;
     }
     #owl-clients .owl-next {
         right: 0 !important;
@@ -1380,7 +1451,7 @@ footer {
         height: 10%;
         filter: grayscale(100%);
         margin-left: auto;
-        margin-right: 9em;
+        margin-right: 7.5em;
         padding-left: 0;
     }
     #clients .clients-images img:hover {
@@ -1389,4 +1460,354 @@ footer {
         cursor: pointer;
         transform: scale(1.1);
     }
+}
+
+/*For tablet*/
+@media only screen and (max-width: 767px) {
+    /*#header-two {
+        padding: 2em 0 2em 0;
+    }
+    .top-right {
+        display: none;
+    }
+    .header-top-bar .top-left ul {
+        text-align: center;
+    }
+    .header-top-bar .top-left li {
+        line-height: 15px;
+        font-family: 'Open Sans';
+    }
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-toggler span {
+        margin-right: 4em;
+    }
+    .fa-bars {
+        color: var(--font-dark) !important;
+        font-size: 1.5em;
+    }
+    .navbar-nav {
+        margin-top: 1em;
+    }
+    #carouselConstruction .carousel-item img{
+        height: 450px;
+        object-fit: cover;
+    }
+    #carouselConstruction .carousel-inner .carousel-item h1 {
+        font-size: 24px;
+        padding: 0 5em 0 5em;
+    } 
+    #carouselConstruction .carousel-inner .carousel-item p {
+        font-size: 16px;
+        margin: 0 5em 0 5em;
+        padding: 0;
+        line-height: 20px;
+    }
+    #carouselConstruction .carousel-inner .carousel-item a.btn-view-projects {
+        padding: 5px 30px 5px 30px;
+        font-size: 12px;
+        line-height: 35px;
+        font-weight: 600;
+        margin-top: 2em
+    }
+    #carouselConstruction .carousel-control-prev {
+        width: 30px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 45%;
+    }
+    #carouselConstruction .carousel-control-next {
+        width: 30px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 45%;
+    }
+    #carouselConstruction .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+    #profile {
+        padding-top: 40px;
+    }
+    #profile h2 {
+        font-size: 24px;
+    }
+    #profile p {
+        font-size: 14px;
+    }
+    #profile .profile-image {
+        margin-top: 2em;
+    }
+    #profile .profile-image img {
+        width: 500px;
+        text-align: center;
+    }
+    #profile .profile-info-more li {
+        font-size: 14px;
+    }
+    #profile .profile-info-more .fa-check{
+        padding: 8px;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+    #services {
+        padding: 60px 0 40px 0;
+    }
+    #services h2 {
+        font-size: 24px;
+        margin-bottom: 1em;
+    }
+    #services p {
+        font-size: 14px;
+    }
+    #services .card-service {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 4em;
+        margin-top: 0;
+        width: 300px !important;
+        min-height: 390px !important;
+    }
+    #services .card-service-body {
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+    }
+    #services .card-icon img{
+        padding: 40px 0 20px 0;
+        width: 80px;
+    }
+    #services .card-info {
+        padding: 0 0 10px 0;
+    }
+    #services .card-info h5 {        
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #services .card-description p {
+        padding-bottom: 10px;
+        font-size: 1em;
+    }
+    #services a.btn-read-more {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 10px 40px 10px 40px;
+    }
+    #works {
+        padding: 60px 0 60px 0;
+    }
+    #works .works-info {
+        margin: 0 1em 0 1em;
+    }
+    #works .works-info h2 {
+        font-size: 24px;
+        margin-bottom: 1em;
+    }
+    #works .works-info p {
+        font-size: 14px;
+    }
+    #works .works-detail {
+        margin: 5em 3em 0 3em;
+    }
+    #works .works-step {
+        left: 63%;
+    }
+    #works .works-detail-number {
+        width: 35px;
+        height: 35px;
+    }
+    #works .works-detail-number span {
+        font-size: 20px !important;
+    }
+    #works .works-detail-title {
+        margin: 1.5em 0 1em 0;
+    } 
+    #works .works-detail-title h4 {
+        font-size: 18px;
+    }
+    #works .works-detail-description {
+        margin: 0 0 5em 0;
+    }
+    #works .projects {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #works .projects-category {
+        top: 65%;
+        left: 10%;
+    }
+    #works .projects-title {
+        position: absolute;
+        top: 75%;
+        left: 10%;
+        width: 300px;
+    }
+    #works .projects-title h4 {
+        font-size: 20px;
+    }
+    #works .projects-img img {
+        height: 80%;
+    }
+    #owl-projects .owl-prev,
+    #owl-projects .owl-next {
+        display: none;
+    }
+    .works-projects .owl-dots {
+        margin-top: 2.5em;
+    }
+    #testimonials {
+        padding: 60px 0 60px 0;
+    }
+    #testimonials .owl-next,
+    #testimonials .owl-prev {
+        display: none;
+    }
+    #testimonials .testimonials-title h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    #testimonials .testimonials-box {
+        width: 330px;
+        min-height: 50px;
+        margin: 0 auto 1em auto;
+        padding: 30px;
+        position: relative;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    }
+    #testimonials .fa-quote-left {*/
+        /*top: 65%;
+        bottom: 5%;
+        right: 5%;
+        font-size: 3em;
+    }
+    #testimonials .testimonials-avatar img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+    #testimonials .testimonials-info {
+        padding: 0 1em 0 5em;
+    }
+    #testimonials .testimonials-description p {
+        font-size: 14px;
+    }
+    #testimonials .testimonials-name h5{
+        margin-bottom: 0.5em;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    #testimonials .testimonials-position p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #testimonials .testimonials-rating img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+    #packages {
+        padding-bottom: 40px;
+    }
+    #packages .packages-title h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    #packages .card-packages {
+        margin-bottom: 4em;
+    }
+    #packages .card-packages-recommended {
+        right: 20px;
+    }
+    #contact {
+        padding: 60px 0 40px 0;
+    }
+    #contact .get-in-touch {
+        margin-top: 3em;
+    }
+    #contact .get-in-touch h2 {
+        font-size: 28px;
+    }
+    #contact .contact-information h4 {
+        font-size: 22px;
+    }
+    #contact .contact-information li {
+        font-size: 14px;
+    }
+    #contact .contact-information li > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #contact .contact-information li > i.fa {
+        font-size: 1.6em;
+    }
+    #contact .opening-hours h4 {
+        font-size: 22px;
+    } 
+    #contact .opening-hours li {
+        font-size: 14px;
+    }
+    #contact .get-in-touch p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    #contact .get-in-touch form .send-message {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 3em 0 1.5em 0;
+        justify-content: space-between;
+    }
+    #contact .send-message-button button {
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    #contact .send-message-button .fa-send {
+        padding-right: 0.5em;
+        font-size: 1.5em;
+    }
+    #contact form .send-message .input-box {
+        width: 100%;
+    }
+    #footer {
+        padding: 60px 0 20px 0;
+    }
+    #footer .footer-services {
+        margin-top: 1em;
+    }
+    #footer .footer-information {
+        margin-top: 1em;
+    }
+    #footer .footer-copyright h3 {
+        font-size: 14px;
+    }
+    #owl-clients .owl-prev,
+    #owl-clients .owl-next {
+        top: 30% !important;
+    }
+    #owl-clients .owl-next {
+        right: 0 !important;
+    }
+    #owl-clients .owl-prev {
+        left: 0 !important
+    }
+    #clients .clients-images img {
+        width: 40%;
+        height: 10%;
+        filter: grayscale(100%);
+        margin-left: auto;
+        margin-right: 7.5em;
+        padding-left: 0;
+    }
+    #clients .clients-images img:hover {
+        filter: grayscale(0);
+        transition: .5s ease;
+        cursor: pointer;
+        transform: scale(1.1);
+    }*/
 }
