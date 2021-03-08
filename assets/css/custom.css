@@ -1321,7 +1321,7 @@ footer {
         line-height: 35px;
     }
     #testimonials .testimonials-box {
-        width: 330px;
+        width: 300px;
         min-height: 50px;
         margin: 0 auto 1em auto;
         padding: 30px;
@@ -1341,7 +1341,7 @@ footer {
         position: absolute;
     }
     #testimonials .testimonials-info {
-        padding: 0 1em 0 5em;
+        padding: 0 0 0 5em;
     }
     #testimonials .testimonials-description p {
         font-size: 14px;
