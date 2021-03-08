@@ -1383,10 +1383,10 @@ footer {
         font-size: 28px;
     }
     #contact .contact-information h4 {
-        font-size: 22px;
+        font-size: 20px;
     }
     #contact .contact-information li {
-        font-size: 14px;
+        font-size: 12px;
     }
     #contact .contact-information li > * {
         display: inline-block;
@@ -1396,10 +1396,13 @@ footer {
         font-size: 1.6em;
     }
     #contact .opening-hours h4 {
-        font-size: 22px;
+        font-size: 20px;
     } 
     #contact .opening-hours li {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    #contact .get-in-touch h2 {
+        font-size: 22px;
     }
     #contact .get-in-touch p {
         font-size: 14px;
@@ -1451,7 +1454,7 @@ footer {
         height: 10%;
         filter: grayscale(100%);
         margin-left: auto;
-        margin-right: 7.5em;
+        margin-right: 7.3em;
         padding-left: 0;
     }
     #clients .clients-images img:hover {
