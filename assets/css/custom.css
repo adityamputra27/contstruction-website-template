@@ -739,13 +739,15 @@ nav {
     max-height: 100px;
 }
 #clients .clients-images {
-    padding-left: 2.5em;
-    margin: 0;
+    /*padding-left: 1em;*/
 }
 #clients .clients-images img {
     width: 70%;
     height: 10%;
     filter: grayscale(100%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #clients .clients-images img:hover {
     filter: grayscale(0);
@@ -1449,12 +1451,12 @@ footer {
     #owl-clients .owl-prev {
         left: 0 !important
     }
+    #clients .clients-image {
+    }
     #clients .clients-images img {
         width: 40%;
         height: 10%;
         filter: grayscale(100%);
-        margin-left: auto;
-        margin-right: 7.3em;
         padding-left: 0;
     }
     #clients .clients-images img:hover {
