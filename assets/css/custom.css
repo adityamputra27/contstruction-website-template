@@ -1371,7 +1371,7 @@ footer {
         margin-bottom: 4em;
     }
     #packages .card-packages-recommended {
-        right: 20px;
+        right: 0px;
     }
     #contact {
         padding: 60px 0 40px 0;
