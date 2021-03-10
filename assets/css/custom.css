@@ -26,6 +26,9 @@
     /* outline: 0; */
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--white);
     line-height: 26px;
@@ -47,7 +50,7 @@ header {
     padding: 7px 0 0 0;
 }
 .header-top-bar .top-left li{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: bold;
     color: var(--white);
@@ -742,7 +745,7 @@ nav {
     /*padding-left: 1em;*/
 }
 #clients .clients-images img {
-    width: 70%;
+    width: 60%;
     height: 10%;
     filter: grayscale(100%);
     display: block;
@@ -1077,7 +1080,7 @@ footer {
     position: absolute;
     right: 5%;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 .navbar-toggler span:nth-child(1){
     background-color: var(--text-dark);
@@ -1151,7 +1154,6 @@ footer {
         font-size: 14px;
         font-weight: 600;
         text-align: center;
-        letter-spacing: 1;
         margin: 2em 1.5em 0 1.5em;
         padding: 0;
         line-height: 20px;
