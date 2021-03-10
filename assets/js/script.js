@@ -99,4 +99,17 @@ $(function () {
 
 	// Init Aos
 	AOS.init();
+
+	// Show btn whatsapp & to top
+	let buttonToTop = document.querySelector('.btn-to-top');
+
+	window.addEventListener('scroll', function () {
+		if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+			buttonToTop.classList.add('show');
+		} else {
+			buttonToTop.classList.remove('show');
+		}
+
+		
+	});
 });
