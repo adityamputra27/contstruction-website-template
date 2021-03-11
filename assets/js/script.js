@@ -97,19 +97,21 @@ $(function () {
 		}
 	});
 
-	// Init Aos
+	// Init Aosnya
 	AOS.init();
 
 	// Show btn whatsapp & to top
 	let buttonToTop = document.querySelector('.btn-to-top');
+	let navbar = document.querySelector('.navbar');
 
 	window.addEventListener('scroll', function () {
-		if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+		if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
 			buttonToTop.classList.add('show');
+			buttonToTop.classList.remove('hide');
 		} else {
+			buttonToTop.classList.add('hide');
 			buttonToTop.classList.remove('show');
 		}
-
-		
+		navbar.classList.toggle('navbar-scroll', window.scrollY > 500);
 	});
 });

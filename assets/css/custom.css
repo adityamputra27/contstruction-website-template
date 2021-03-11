@@ -157,11 +157,14 @@ header {
 nav {
     margin: 0.5em 0 0.5em 0 !important;
 }
-.navbar .navbar-brand {
-    color: var(--orange);
-    font-family: 'Work Sans', !important;
-    font-size: 25px;
+.navbar a.navbar-brand {
+    color: var(--font-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
     font-weight: 600;
+}
+.logo {
+    max-width: 50px;
 }
 .navbar-nav {
     margin-right: 3em;
@@ -768,9 +771,9 @@ footer {
 #footer .footer-content {
     margin-bottom: 3em; 
 }
-#footer .footer-info-logo h3 {
+#footer .footer-info-logo h4 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--white);
     margin-bottom: 1.5em;
@@ -1109,6 +1112,17 @@ footer {
     transform: rotate(-45deg);
     background-color: var(--orange);
 }
+/* Scroll navbar */
+.navbar-scroll {
+    position: fixed;
+    top: -1.2%;
+    z-index: 999;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.6s;
+    background-color: var(--white);
+    width: 100%;
+    transition: 0.5s;
+}
 a.btn-to-top {
     position: fixed;
     bottom: 20px;
@@ -1126,6 +1140,10 @@ a.btn-to-top.show {
     display: block;
     animation: fadeIn ease 2s;
 }
+a.btn-to-top.hide {
+    display: none;
+    animation: fadeOut ease 2s;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -1134,8 +1152,17 @@ a.btn-to-top.show {
         opacity: 1;
     }
 }
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 a.btn-to-top:hover {
     background-color: var(--dark-orange);
+    transition: all 0.5s ease;
 }
 a.btn-to-top i {
     padding: 10px 15px 15px 15px;
@@ -1150,7 +1177,7 @@ a.btn-whatsapp {
     left: 20px;
     bottom: 20px;
     z-index: 9999;
-    background-color: #25D366;
+    background-color: rgb(22, 175, 78);
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -1159,6 +1186,7 @@ a.btn-whatsapp {
 }
 a.btn-whatsapp:hover {
     background-color: #24CC63;
+    transition: all 0.5s ease;
 }
 a.btn-whatsapp i {
     padding: 15px 15px 15px 15px;
@@ -1187,6 +1215,16 @@ a.btn-whatsapp i {
     .header-top-bar .top-left li {
         line-height: 15px;
         font-family: 'Open Sans';
+    }
+    .navbar a.navbar-brand {
+        padding-top: 10px;
+    }
+    .navbar {
+        padding: 10px 20px 10px 20px;
+    }
+    .navbar-scroll {
+        top: -1.6%;
+        padding: 10px 20px 10px 20px;
     }
     .navbar-toggler {
         border: none;
