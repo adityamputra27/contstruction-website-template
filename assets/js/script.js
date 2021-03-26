@@ -69,8 +69,12 @@ $(function () {
 	    		items : 1,
 	    		dots: false
 	    	},
-	    	600 : {
-	    		items : 5,
+	    	767 : {
+	    		items : 1,
+	    		dots: false
+	    	},
+	    	991 : {
+	    		items: 4,
 	    		dots: false
 	    	}
 	    },
@@ -112,6 +116,6 @@ $(function () {
 			buttonToTop.classList.add('hide');
 			buttonToTop.classList.remove('show');
 		}
-		navbar.classList.toggle('navbar-scroll', window.scrollY > 500);
+		navbar.classList.toggle('navbar-scroll', window.scrollY > 0);
 	});
 });

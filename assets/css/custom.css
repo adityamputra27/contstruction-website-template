@@ -1,5 +1,4 @@
 /* Import Font */
-/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Work+Sans');*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
@@ -167,7 +166,7 @@ nav {
     max-width: 50px;
 }
 .navbar-nav {
-    margin-right: 3em;
+    margin-right: 1em;
 }
 .navbar-nav li {
     padding-right: 1em;
@@ -254,7 +253,7 @@ nav {
     background-color: var(--dark-orange);
 }
 #profile .profile-image img {
-    /* width: 430px !important; */
+    border-radius: 10% 0 10% 0;
 }
 #services {
     padding: 80px 0 110px 0;
@@ -510,7 +509,7 @@ nav {
 }
 #packages .card-packages {
     max-width: 360px;
-    height: 520px;
+    min-height: 530px;
     background-color: var(--white);
     margin: 0 auto;
 }
@@ -519,7 +518,25 @@ nav {
     transition: .5s ease;
 }
 #packages .card-packages-body {
-    padding: 50px 0 0 55px;
+    width: 300px;
+    padding: 50px 0 50px 55px;
+}
+#packages .card-packages-popular {
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    width: 120px;
+    height: 35px;
+    background-color: #FC5185;
+    text-align: center;
+}
+#packages .card-packages-popular span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 35px;
 }
 #packages .card-packages-recommended {
     position: absolute;
@@ -529,6 +546,23 @@ nav {
     height: 35px;
     background-color: var(--orange);
     text-align: center;
+}
+#packages .card-packages-elite {
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    width: 120px;
+    height: 35px;
+    background-color: #673DE6;
+    text-align: center;
+}
+#packages .card-packages-elite span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 35px;
 }
 #packages .card-packages-recommended span {
     font-family: 'Work Sans', sans-serif;
@@ -545,6 +579,7 @@ nav {
     color: var(--text-dark);
     text-transform: uppercase;
     margin-bottom: 0.5em;
+    margin-top: 1em;
 }
 #packages .card-packages-price h2 {
     font-family: 'Open Sans', sans-serif;
@@ -553,7 +588,7 @@ nav {
     color: var(--text-dark);
     margin-bottom: 0.5em;
 }
-#packages .card-packages-price h2::first-letter {
+#packages .card-packages-price span#nominal {
     font-size: 25px;
     font-weight: normal;
 }
@@ -573,13 +608,13 @@ nav {
     line-height: 40px;
     display: block;
 }
-#packages .card-packages-features .fa-check {
+#packages .card-packages-features .fa-check-circle {
     font-size: 1.5em;
     color: var(--text-dark);
     padding-right: 0.5em;
 }
 #packages .card-packages-button button {
-    width: 150px;
+    width: 240px;
     height: 50px;
     background-color: var(--orange);
     text-align: center;
@@ -588,6 +623,7 @@ nav {
     font-size: 14px;
     color: var(--white);
     text-transform: uppercase;
+    margin-top: 1em;
 }
 /*End*/
 /*Contact*/
@@ -905,15 +941,6 @@ footer {
 #carouselConstruction .carousel-inner {
     background-size: cover;
 }
-#carouselConstruction .carousel-inner::before {
-    /*position: absolute;
-    content: '';
-    background: rgba(0, 0, 0, 0.45);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;*/
-}
 #carouselConstruction .carousel-inner .carousel-item .info {
     font-family: 'Poppins', sans-serif;
     position: absolute;
@@ -931,7 +958,7 @@ footer {
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
-    padding: 0 8em 0 8em;
+    padding: 0 5em 0 5em;
 }
 #carouselConstruction .carousel-inner .carousel-item p {
     font-size: 18px;
@@ -1203,353 +1230,358 @@ a.btn-whatsapp i {
 991px - Dekstop*/
 /*Mobile*/
 @media only screen and (max-width: 400px) {
-    #header-two {
-        padding: 2em 0 2em 0;
-    }
     .top-right {
-        display: none;
+        display: none !important;
     }
     .header-top-bar .top-left ul {
-        text-align: center;
     }
     .header-top-bar .top-left li {
-        line-height: 15px;
-        font-family: 'Open Sans';
+        line-height: 15px !important;
+        font-family: 'Open Sans' !important;
+    }
+    .header-top-bar .top-left li:nth-child(1) {
+        padding-right: 0 !important;
+    }
+    .header-top-bar .top-left li:nth-child(2) {
+        padding-right: 0;
     }
     .navbar a.navbar-brand {
-        padding-top: 10px;
+        padding-top: 10px !important;
     }
     .navbar {
-        padding: 10px 20px 10px 20px;
+        padding: 10px 20px 10px 20px !important;
     }
     .navbar-scroll {
-        top: -1.6%;
-        padding: 10px 20px 10px 20px;
+        top: -1.6% !important;
+        padding: 10px 20px 10px 20px !important;
     }
     .navbar-toggler {
-        border: none;
+        border: none !important;
+    }
+    .navbar-toggler span {
+        right: -15% !important;
     }
     .fa-bars {
-        color: var(--font-dark) !important;
-        font-size: 1.5em;
+        color: var(--font-dark) !important !important;
+        font-size: 1.5em !important;
     }
     .navbar-nav {
-        margin-top: 1em;
+        margin-top: 1em !important;
     }
     #modalSearch .input-search {
-        width: 80%;
+        width: 80% !important;
     }
     #carouselConstruction .info {
         /*margin: 0 1em 0 1em;*/
     }
     #carouselConstruction .carousel-item img{
         /*margin: 30px 0 30px 0 !important;*/
-        height: 450px;
-        object-fit: cover;
+        height: 450px !important;
+        object-fit: cover !important;
     }
     #carouselConstruction .carousel-inner .carousel-item h1 {
-        font-size: 22px;
-        padding: 0;
+        font-size: 22px !important;
+        padding: 0 !important;
     } 
     #carouselConstruction .carousel-inner .carousel-item p {
-        font-size: 14px;
-        font-weight: 600;
-        text-align: center;
-        margin: 2em 1.5em 0 1.5em;
-        padding: 0;
-        line-height: 20px;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        margin: 2em 1.5em 0 1.5em !important;
+        padding: 0 !important;
+        line-height: 20px !important;
     }
     #carouselConstruction .carousel-inner .carousel-item a.btn-view-projects {
-        padding: 0px 15px 0px 15px;
-        font-size: 12px;
-        line-height: 35px;
-        font-weight: 600;
-        margin-top: 2em
+        padding: 0px 15px 0px 15px !important;
+        font-size: 12px !important;
+        line-height: 35px !important;
+        font-weight: 600 !important;
+        margin-top: 2em !important;
     }
     #carouselConstruction .carousel-control-prev {
-        width: 30px;
-        height: 60px;
-        background: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 45%;
+        width: 30px !important;
+        height: 60px !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        position: absolute !important;
+        top: 45% !important;
     }
     #carouselConstruction .carousel-control-next {
-        width: 30px;
-        height: 60px;
-        background: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 45%;
+        width: 30px !important;
+        height: 60px !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        position: absolute !important;
+        top: 45% !important;
     }
     #carouselConstruction .carousel-indicators li {
-        width: 10px;
-        height: 10px;
+        width: 10px !important;
+        height: 10px !important;
     }
     #profile {
-        padding-top: 40px;
+        padding-top: 40px !important;
     }
     #profile h2 {
-        font-size: 24px;
+        font-size: 24px !important;
     }
     #profile p {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #profile .profile-image {
-        margin-top: 2em;
+        margin-top: 2em !important;
     }
     #profile .profile-image img {
-        width: 500px;
-        text-align: center;
+        width: 500px !important;
+        text-align: center !important;
     }
     #profile .profile-info-more li {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #profile .profile-info-more .fa-check{
-        padding: 8px;
-        border-radius: 50%;
-        margin-right: 1em;
+        padding: 8px !important;
+        border-radius: 50% !important;
+        margin-right: 1em !important;
     }
     #services {
-        padding: 60px 0 40px 0;
+        padding: 60px 0 40px 0 !important;
     }
     #services h2 {
-        font-size: 24px;
-        margin-bottom: 1em;
+        font-size: 24px !important;
+        margin-bottom: 1em !important;
     }
     #services p {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #services .card-service {
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 4em;
-        margin-top: 0;
-        width: 300px !important;
-        min-height: 390px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        margin-bottom: 4em !important;
+        margin-top: 0 !important;
+        width: 300px !important !important;
+        min-height: 390px !important !important;
     }
     #services .card-service-body {
-        margin-left: auto;
-        margin-right: auto;
-        width: 250px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 250px !important;
     }
     #services .card-icon img{
-        padding: 40px 0 20px 0;
-        width: 80px;
+        padding: 40px 0 20px 0 !important;
+        width: 80px !important;
     }
     #services .card-info {
-        padding: 0 0 10px 0;
+        padding: 0 0 10px 0 !important;
     }
     #services .card-info h5 {        
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 24px !important;
+        font-weight: 600 !important;
     }
     #services .card-description p {
-        padding-bottom: 10px;
-        font-size: 1em;
+        padding-bottom: 10px !important;
+        font-size: 1em !important;
     }
     #services a.btn-read-more {
-        font-size: 12px;
-        font-weight: 600;
-        padding: 10px 40px 10px 40px;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        padding: 10px 40px 10px 40px !important;
     }
     #works {
-        padding: 60px 0 60px 0;
+        padding: 60px 0 60px 0 !important;
     }
     #works .works-info {
-        margin: 0 1em 0 1em;
+        margin: 0 1em 0 1em !important;
     }
     #works .works-info h2 {
-        font-size: 24px;
-        margin-bottom: 1em;
+        font-size: 24px !important;
+        margin-bottom: 1em !important;
     }
     #works .works-info p {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #works .works-detail {
-        margin: 5em 3em 0 3em;
+        margin: 5em 3em 0 3em !important;
     }
     #works .works-step {
-        left: 63%;
+        left: 63% !important;
     }
     #works .works-detail-number {
-        width: 35px;
-        height: 35px;
+        width: 35px !important;
+        height: 35px !important;
     }
     #works .works-detail-number span {
-        font-size: 20px !important;
+        font-size: 20px !important !important;
     }
     #works .works-detail-title {
-        margin: 1.5em 0 1em 0;
+        margin: 1.5em 0 1em 0 !important;
     } 
     #works .works-detail-title h4 {
-        font-size: 18px;
+        font-size: 18px !important;
     }
     #works .works-detail-description {
-        margin: 0 0 5em 0;
+        margin: 0 0 5em 0 !important;
     }
     #works .projects {
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 350px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     #works .projects-category {
-        top: 65%;
-        left: 10%;
+        top: 65% !important;
+        left: 10% !important;
     }
     #works .projects-title {
-        position: absolute;
-        top: 75%;
-        left: 10%;
-        width: 300px;
+        position: absolute !important;
+        top: 75% !important;
+        left: 10% !important;
+        width: 300px !important;
     }
     #works .projects-title h4 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     #works .projects-img img {
-        height: 80%;
+        height: 80% !important;
     }
     #owl-projects .owl-prev,
     #owl-projects .owl-next {
-        display: none;
+        display: none !important;
     }
     .works-projects .owl-dots {
-        margin-top: 2.5em;
+        margin-top: 2.5em !important;
     }
     #testimonials {
-        padding: 60px 0 60px 0;
+        padding: 60px 0 60px 0 !important;
     }
     #testimonials .owl-next,
     #testimonials .owl-prev {
-        display: none;
+        display: none !important;
     }
     #testimonials .testimonials-title h2 {
-        font-size: 24px;
-        line-height: 35px;
+        font-size: 24px !important;
+        line-height: 35px !important;
     }
     #testimonials .testimonials-box {
-        width: 300px;
-        min-height: 50px;
-        margin: 0 auto 1em auto;
-        padding: 30px;
-        position: relative;
-        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+        width: 300px !important;
+        min-height: 50px !important;
+        margin: 0 auto 1em auto !important;
+        padding: 30px !important;
+        position: relative !important;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1) !important;
     }
     #testimonials .fa-quote-left {
-        /*top: 65%;*/
-        bottom: 5%;
-        right: 5%;
-        font-size: 3em;
+        /*top: 65% !important;*/
+        bottom: 5% !important;
+        right: 5% !important;
+        font-size: 3em !important;
     }
     #testimonials .testimonials-avatar img {
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        position: absolute;
+        border-radius: 50% !important;
+        width: 60px !important;
+        height: 60px !important;
+        position: absolute !important;
     }
     #testimonials .testimonials-info {
-        padding: 0 0 0 5em;
+        padding: 0 0 0 5em !important;
     }
     #testimonials .testimonials-description p {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #testimonials .testimonials-name h5{
-        margin-bottom: 0.5em;
-        font-size: 16px;
-        font-weight: bold;
+        margin-bottom: 0.5em !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
     }
     #testimonials .testimonials-position p {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 14px !important;
+        line-height: 20px !important;
     }
     #testimonials .testimonials-rating img {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
+        width: 20px !important;
+        height: 20px !important;
+        display: inline-block !important;
     }
     #packages {
-        padding-bottom: 40px;
+        padding-bottom: 40px !important;
     }
     #packages .packages-title h2 {
-        font-size: 24px;
-        line-height: 35px;
+        font-size: 24px !important;
+        line-height: 35px !important;
     }
     #packages .card-packages {
-        margin-bottom: 4em;
+        margin-bottom: 4em !important;
     }
     #packages .card-packages-recommended {
-        right: 0px;
+        right: 0px !important;
     }
     #contact {
-        padding: 60px 0 40px 0;
+        padding: 60px 0 40px 0 !important;
     }
     #contact .get-in-touch {
-        margin-top: 3em;
+        margin-top: 3em !important;
     }
     #contact .get-in-touch h2 {
-        font-size: 28px;
+        font-size: 28px !important;
     }
     #contact .contact-information h4 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     #contact .contact-information li {
-        font-size: 12px;
+        font-size: 12px !important;
     }
     #contact .contact-information li > * {
-        display: inline-block;
-        vertical-align: middle;
+        display: inline-block !important;
+        vertical-align: middle !important;
     }
     #contact .contact-information li > i.fa {
-        font-size: 1.6em;
+        font-size: 1.6em !important;
     }
     #contact .opening-hours h4 {
-        font-size: 20px;
+        font-size: 20px !important;
     } 
     #contact .opening-hours li {
-        font-size: 12px;
+        font-size: 12px !important;
     }
     #contact .get-in-touch h2 {
-        font-size: 22px;
+        font-size: 22px !important;
     }
     #contact .get-in-touch p {
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 14px !important;
+        font-weight: 400 !important;
     }
     #contact .get-in-touch form .send-message {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 3em 0 1.5em 0;
-        justify-content: space-between;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 3em 0 1.5em 0 !important;
+        justify-content: space-between !important;
     }
     #contact .send-message-button button {
-        width: 200px;
-        height: 40px;
-        font-size: 14px;
-        font-weight: 600;
+        width: 200px !important;
+        height: 40px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
     }
     #contact .send-message-button .fa-send {
-        padding-right: 0.5em;
-        font-size: 1.5em;
+        padding-right: 0.5em !important;
+        font-size: 1.5em !important;
     }
     #contact form .send-message .input-box {
-        width: 100%;
+        width: 100% !important;
     }
     #footer {
-        padding: 60px 0 20px 0;
+        padding: 60px 0 20px 0 !important;
     }
     #footer .footer-services {
-        margin-top: 1em;
+        margin-top: 1em !important;
     }
     #footer .footer-information {
-        margin-top: 1em;
+        margin-top: 1em !important;
     }
     #footer .footer-copyright h3 {
-        font-size: 14px;
+        font-size: 14px !important;
     }
     #owl-clients .owl-prev,
     #owl-clients .owl-next {
-        top: 30% !important;
+        top: 30% !important !important;
     }
     #owl-clients .owl-next {
-        right: 0 !important;
+        right: 0 !important !important;
     }
     #owl-clients .owl-prev {
         left: 0 !important
@@ -1557,42 +1589,40 @@ a.btn-whatsapp i {
     #clients .clients-image {
     }
     #clients .clients-images img {
-        width: 40%;
-        height: 10%;
-        filter: grayscale(100%);
-        padding-left: 0;
+        width: 40% !important;
+        height: 10% !important;
+        filter: grayscale(100%) !important;
+        padding-left: 0 !important;
     }
     #clients .clients-images img:hover {
-        filter: grayscale(0);
-        transition: .5s ease;
-        cursor: pointer;
-        transform: scale(1.1);
+        filter: grayscale(0) !important;
+        transition: .5s ease !important;
+        cursor: pointer !important;
+        transform: scale(1.1) !important;
     }
 }
 
 /*For tablet*/
 @media only screen and (max-width: 767px) {
-    /*#header-two {
-        padding: 2em 0 2em 0;
-    }
     .top-right {
         display: none;
     }
     .header-top-bar .top-left ul {
         text-align: center;
     }
-    .header-top-bar .top-left li {
-        line-height: 15px;
-        font-family: 'Open Sans';
+    .header-top-bar .top-left li:nth-child(1) {
+        padding-right: 5em;
     }
     .navbar-toggler {
         border: none;
+    }
+    .navbar-scroll {
+        top: -2%;
     }
     .navbar-toggler span {
         margin-right: 4em;
     }
     .fa-bars {
-        color: var(--font-dark) !important;
         font-size: 1.5em;
     }
     .navbar-nav {
@@ -1604,7 +1634,7 @@ a.btn-whatsapp i {
     }
     #carouselConstruction .carousel-inner .carousel-item h1 {
         font-size: 24px;
-        padding: 0 5em 0 5em;
+        padding: 1em 1.5em 0 1.5em;
     } 
     #carouselConstruction .carousel-inner .carousel-item p {
         font-size: 16px;
@@ -1624,14 +1654,14 @@ a.btn-whatsapp i {
         height: 60px;
         background: rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 45%;
+        top: 40%;
     }
     #carouselConstruction .carousel-control-next {
         width: 30px;
         height: 60px;
         background: rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 45%;
+        top: 40%;
     }
     #carouselConstruction .carousel-indicators li {
         width: 10px;
@@ -1647,11 +1677,13 @@ a.btn-whatsapp i {
         font-size: 14px;
     }
     #profile .profile-image {
-        margin-top: 2em;
+        margin-top: 3em;
     }
     #profile .profile-image img {
-        width: 500px;
-        text-align: center;
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     #profile .profile-info-more li {
         font-size: 14px;
@@ -1676,8 +1708,8 @@ a.btn-whatsapp i {
         margin-left: auto;
         margin-bottom: 4em;
         margin-top: 0;
-        width: 300px !important;
-        min-height: 390px !important;
+        width: 330px !important;
+        min-height: 420px !important;
     }
     #services .card-service-body {
         margin-left: auto;
@@ -1686,7 +1718,7 @@ a.btn-whatsapp i {
     }
     #services .card-icon img{
         padding: 40px 0 20px 0;
-        width: 80px;
+        width: 100px;
     }
     #services .card-info {
         padding: 0 0 10px 0;
@@ -1721,7 +1753,7 @@ a.btn-whatsapp i {
         margin: 5em 3em 0 3em;
     }
     #works .works-step {
-        left: 63%;
+        left: 59%;
     }
     #works .works-detail-number {
         width: 35px;
@@ -1752,7 +1784,7 @@ a.btn-whatsapp i {
         position: absolute;
         top: 75%;
         left: 10%;
-        width: 300px;
+        width: 200px;
     }
     #works .projects-title h4 {
         font-size: 20px;
@@ -1770,24 +1802,20 @@ a.btn-whatsapp i {
     #testimonials {
         padding: 60px 0 60px 0;
     }
-    #testimonials .owl-next,
-    #testimonials .owl-prev {
-        display: none;
-    }
     #testimonials .testimonials-title h2 {
         font-size: 24px;
         line-height: 35px;
     }
     #testimonials .testimonials-box {
-        width: 330px;
+        width: 450px;
         min-height: 50px;
         margin: 0 auto 1em auto;
         padding: 30px;
         position: relative;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     }
-    #testimonials .fa-quote-left {*/
-        /*top: 65%;
+    #testimonials .fa-quote-left {
+        top: 65%;
         bottom: 5%;
         right: 5%;
         font-size: 3em;
@@ -1905,11 +1933,12 @@ a.btn-whatsapp i {
         left: 0 !important
     }
     #clients .clients-images img {
-        width: 40%;
-        height: 10%;
+        width: 35%;
+        height: 12%;
         filter: grayscale(100%);
+        display: block;
         margin-left: auto;
-        margin-right: 7.5em;
+        margin-right: auto;
         padding-left: 0;
     }
     #clients .clients-images img:hover {
@@ -1917,5 +1946,5 @@ a.btn-whatsapp i {
         transition: .5s ease;
         cursor: pointer;
         transform: scale(1.1);
-    }*/
+    }
 }
